@@ -17,21 +17,37 @@ function Home() {
     
     console.log(currency)
 
+    const getTickers = (currentRate, item) => {
+        currency.filter(item => item !== currentRate)
+    }
     return (
-        
         <>
             <div>
-                <h1>This homepage will have a table</h1>
                 <div className="select">
                     <p>Base currency: </p>
-                    <select defaultValue={currentRate} onChange={e => setCurrentRate(e.target.value)}>
+                    <select className="select2" defaultValue={currentRate} onChange={e => setCurrentRate(e.target.value)}>
                         {currency.map((item, index) => <option key={item[0]} value={item[0]}>
                             {item[0]}
                             </option>)}
                     </select>
                 </div>
                 <div>
-                    {currency.map(item => <p>{`${item[0]}: ${1 / item[1]}`}</p>)}
+                    <table className="table">
+                    <thead>
+                    <tr className="tr">
+                        <th>Currency</th>
+                        <th>Rate</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {currency.map(item => (
+                        <tr>
+                        <td>{`${item[0]}/${currentRate}`}</td>
+                        <td>{(1/item[1]).toFixed(2)}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
                 </div>
             </div>
         </>

@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from "react";
+const API_URL = 'https://open.er-api.com/v6/latest/'
+
+
 function Convert() {
     return (
         <>

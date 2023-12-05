@@ -9,12 +9,12 @@ import NavBar from './components/NavBar'
 function App() {
     return (
     <>
+    <NavBar />
     <Routes>
         <Route path ="/" element = {<Home />} />
         <Route path ="/convert" element = {<Convert />} />
         <Route path ="/auth" element = {<Auth />} />
     </Routes>
-    <NavBar />
     </>
     );
 }

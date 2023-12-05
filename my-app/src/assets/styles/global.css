@@ -1,3 +1,38 @@
 .select {
     display: flex;
 }
+.select2 {
+    width: 10%;
+    height: 5%;
+    margin-top: 17px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+table, td, th {
+    border: 1px solid;
+  }
+  
+table {
+    border-collapse: collapse;
+    width: 17%;
+}
+.tr {
+    background-color: #b3b3b3;
+}
+a:link, a:visited {
+    background-color: #b3b3b3;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+a:hover, a:active {
+    background-color: #6b6b6b;
+}
+
+.mainNav {
+    position: absolute;
+    margin-left: 300px;
+}
