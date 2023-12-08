@@ -19,20 +19,31 @@ table {
 .tr {
     background-color: #b3b3b3;
 }
+
 a:link, a:visited {
     background-color: #b3b3b3;
     color: white;
-    padding: 14px 25px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    height: 50px;
+    width: 100px;
 }
   
 a:hover, a:active {
     background-color: #6b6b6b;
 }
 
-.mainNav {
-    position: absolute;
-    margin-left: 300px;
+.Convert{
+    display: flex;
+}
+
+.amount, .from, .to{
+    margin-right: 10px;
+}
+.btn{
+    margin-top: 90px;
+}
+select, input{
+    width: 100px;
+    border-radius: 7px;
 }

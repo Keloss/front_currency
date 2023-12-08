@@ -1,20 +1,17 @@
 import React from "react";
+import {NavLink} from "react-router-dom"
 import '../assets/styles/global.css'
 const NavBar = () => {
     return (
         <>
         <div className="mainNav">
-            <div>
-                <a href = "/auth">Log in</a>
-            </div>
-            <p></p>
-            <div>
-                <a href = "/">Table</a>
-            </div>
-            <p></p>
-            <div>
-                <a href = "/convert">Convert</a>
-            </div>
+            
+            <NavLink to = "/auth">Log in</NavLink>
+
+            <NavLink to = "/">Table</NavLink>
+            
+            <NavLink to = "/convert">Convert</NavLink>
+            
         </div>
         </>
     );

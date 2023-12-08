@@ -14,19 +14,14 @@ function Home() {
         .then(response => response.json())
         .then(data => setCurrency(Object.entries(data.rates)))
     }, [currentRate])
-    
-    console.log(currency)
 
-    const getTickers = (currentRate, item) => {
-        currency.filter(item => item !== currentRate)
-    }
     return (
         <>
             <div>
                 <div className="select">
                     <p>Base currency: </p>
                     <select className="select2" defaultValue={currentRate} onChange={e => setCurrentRate(e.target.value)}>
-                        {currency.map((item, index) => <option key={item[0]} value={item[0]}>
+                        {currency.map(item => <option key={item[0]} value={item[0]}>
                             {item[0]}
                             </option>)}
                     </select>
@@ -40,7 +35,8 @@ function Home() {
                     </tr>
                     </thead>
                     <tbody>
-                    {currency.map(item => (
+                    {currency.map((item, index) => (
+                        index > 0 &&
                         <tr>
                         <td>{`${item[0]}/${currentRate}`}</td>
                         <td>{(1/item[1]).toFixed(2)}</td>
