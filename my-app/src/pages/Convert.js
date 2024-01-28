@@ -53,9 +53,9 @@ function Convert() {
                     </select>
                 </div>
 
-                <div>
+                <div className="result">
                     <button onClick={() => { convert() }}>Convert</button>
-                    <p className="result">{input + " " + from + "=" + output.toFixed(2) + " " + to}</p>
+                    <p>{input + " " + from + "=" + output.toFixed(2) + " " + to}</p>
                 </div>
             </div>
         </>

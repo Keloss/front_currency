@@ -48,12 +48,18 @@ select, input{
     border-radius: 7px;
 }
 
-button { 
-    margin-top: 80px;
-    margin-left: -80px;
-}
 
 .result{
+    margin-top: 90px;
+    margin-left: -335px;
+}
+
+.InputForm{
     margin-top: 10px;
-    margin-left: -340px;
+    margin-left: 10px;
+}
+
+.btnlog{
+    margin-top: 10px;
+    margin-left: 10px;
 }
