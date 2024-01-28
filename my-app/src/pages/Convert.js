@@ -9,7 +9,6 @@ function Convert() {
     const [currency, setCurrency] = useState([])
     const [input, setInput] = useState(0)
     const [output, setOutput] = useState(0)
-    const [options, setOptions]  = useState([])
     const [from, setFrom] = useState('RUB')
     const [to, setTo] = useState('USD')
 
@@ -19,11 +18,7 @@ function Convert() {
         .then(data => setCurrency(Object.entries(data.rates)))
     }, [from])
 
-    useEffect(() => {
-        setOptions(Object.keys(currency));
-        convert();
-    }, [currency])
-
+    
     function convert() {
         var rate = 0
         {currency.map((item) => {
